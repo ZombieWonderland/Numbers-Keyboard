@@ -12,6 +12,8 @@
 		F27649A01CAC564A006A6198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F276499E1CAC564A006A6198 /* Main.storyboard */; };
 		F27649A21CAC564A006A6198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27649A11CAC564A006A6198 /* Assets.xcassets */; };
 		F27649A51CAC564A006A6198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27649A31CAC564A006A6198 /* LaunchScreen.storyboard */; };
+		F27649AD1CAC566C006A6198 /* Keyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = F27649AC1CAC566C006A6198 /* Keyboard.xib */; };
+		F27649AF1CAC56FE006A6198 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27649AE1CAC56FE006A6198 /* Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F27649A11CAC564A006A6198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F27649A41CAC564A006A6198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F27649A61CAC564A006A6198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F27649AC1CAC566C006A6198 /* Keyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Keyboard.xib; path = ../Keyboard.xib; sourceTree = "<group>"; };
+		F27649AE1CAC56FE006A6198 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keyboard.swift; path = ../Keyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		F27649991CAC564A006A6198 /* Numbers Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F27649AC1CAC566C006A6198 /* Keyboard.xib */,
+				F27649AE1CAC56FE006A6198 /* Keyboard.swift */,
 				F276499A1CAC564A006A6198 /* AppDelegate.swift */,
 				F276499C1CAC564A006A6198 /* ViewController.swift */,
 				F276499E1CAC564A006A6198 /* Main.storyboard */,
@@ -124,6 +130,7 @@
 			files = (
 				F27649A51CAC564A006A6198 /* LaunchScreen.storyboard in Resources */,
 				F27649A21CAC564A006A6198 /* Assets.xcassets in Resources */,
+				F27649AD1CAC566C006A6198 /* Keyboard.xib in Resources */,
 				F27649A01CAC564A006A6198 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F276499D1CAC564A006A6198 /* ViewController.swift in Sources */,
+				F27649AF1CAC56FE006A6198 /* Keyboard.swift in Sources */,
 				F276499B1CAC564A006A6198 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
