@@ -36,20 +36,23 @@ class Keyboard: UIView {
     
     func initializeSubviews() {
         let xibFileName = "Keyboard" // xib extention not included
-        let view = NSBundle.mainBundle().loadNibNamed(xibFileName, owner: self, options: nil)[0] as! UIView
-        self.addSubview(view)
-        view.frame = self.bounds
+        if let view = Bundle.main.loadNibNamed(xibFileName, owner: self, options: nil)?.first as? UIView {
+            self.addSubview(view)
+            view.frame = self.bounds
+        }
     }
     
     // MARK:- Button actions from .xib file
     
-    @IBAction func keyTapped(sender: UIButton) {
+    @IBAction func keyTapped(_ sender: UIButton) {
         // When a button is tapped, send that information to the
         // delegate (ie, the view controller)
-        self.delegate?.keyWasTapped(sender.titleLabel!.text!) // could alternatively send a tag value
+        if let text = sender.titleLabel?.text {
+            self.delegate?.keyWasTapped(character: text) // could alternatively send a tag value
+        }
     }
 
-    @IBAction func backspace(sender: UIButton) {
+    @IBAction func backspace(_ sender: UIButton) {
         self.delegate?.backspace()
     }
 

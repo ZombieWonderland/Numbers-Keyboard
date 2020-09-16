@@ -13,17 +13,17 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, KeyboardDelegate {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField1: UITextField!
     
     @IBOutlet weak var textField2: UITextField!
     
-    var activeTextField = UITextField()
+    var activeTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // initialize custom keyboard for iPad only, since iPhone can use the Number Pad
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+        if UIDevice.current.userInterfaceIdiom == .pad {
             initializeCustomKeyboard()
         }
     }
@@ -36,28 +36,31 @@ class ViewController: UIViewController, UITextFieldDelegate, KeyboardDelegate {
         keyboardView.delegate = self
         
         // required for backspace to work
-        textField.delegate = self
+        textField1.delegate = self
         textField2.delegate = self
         
         // replace system keyboard with custom keyboard
-        textField.inputView = keyboardView
+        textField1.inputView = keyboardView
         textField2.inputView = keyboardView
     }
-
     
-    func textFieldDidBeginEditing(textFieldUser: UITextField) {
-        self.activeTextField = textFieldUser
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.activeTextField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.activeTextField = nil
     }
     
     //
     // MARK: required methods for keyboard delegate protocol
     //
     func keyWasTapped(character: String) {
-        activeTextField.insertText(character)
+        activeTextField?.insertText(character)
     }
     
     func backspace() {
-        activeTextField.deleteBackward()
+        activeTextField?.deleteBackward()
     }
 
 
